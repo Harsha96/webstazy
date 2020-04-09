@@ -1,8 +1,8 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
   <a href="index3.html" class="brand-link">
-    <img src="public/AdminLTE-3.0.4/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-         style="opacity: .8">
+    <img src="img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+         style="opacity:100;margin-left:0px; border-radius:0;">
     <span class="brand-text font-weight-light">AdminLTE 3</span>
   </a>
 
@@ -11,7 +11,7 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
       <div class="image">
-        <img src="public/AdminLTE-3.0.4/public/AdminLTE-3.0.4/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        <img src="img/img_avatar.png" style="border-radius:50%;"alt="User Image">
       </div>
       <div class="info">
         <a href="#" class="d-block"><?php echo $_SESSION['username']; ?></a>
