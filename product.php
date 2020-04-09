@@ -123,7 +123,7 @@
 
                         ?>
 
-                      
+
 
 
                   <tr>
@@ -158,7 +158,7 @@
                               </i>
                               Edit
                           </a>
-                          <a class="btn btn-danger btn-sm" href="#">
+                          <a class="btn btn-danger btn-sm" href="delete.php?pid=<?php echo $row["pid"]; ?>">
                               <i class="fas fa-trash">
                               </i>
                               Delete
