@@ -35,7 +35,7 @@
       <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-    
+
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
       <!-- Control sidebar content goes here -->
@@ -50,6 +50,9 @@
         <b>Version</b> 3.0.4
       </div>
     </footer>
-    <?php include ('include/footer.php')?>
+    <script type="text/javascript">
+      <?php include ('include/footer.php')?>
+    </script>
+
   </body>
   </html>
