@@ -79,6 +79,7 @@
         </div>
         <div class="card-body p-0">
           <table class="table table-striped projects">
+          <a href="addproduct.php"><button  class="btn btn-success">Add New</button></a>  
               <thead>
                   <tr>
                       <th style="width: 1%">
@@ -130,7 +131,7 @@
                       <td>
                         TEST price
                       </td>
-                  
+
                       <td class="project-actions text-right">
                           <a class="btn btn-primary btn-sm" href="#">
                               <i class="fas fa-folder">
