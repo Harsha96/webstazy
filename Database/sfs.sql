@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 08, 2020 at 08:34 PM
+-- Generation Time: Apr 09, 2020 at 12:54 PM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 7.0.0
 
@@ -19,6 +19,37 @@ SET time_zone = "+00:00";
 --
 -- Database: `sfs`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `category`
+--
+
+CREATE TABLE `category` (
+  `cid` varchar(255) NOT NULL,
+  `main_sub_cat` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product`
+--
+
+CREATE TABLE `product` (
+  `pid` int(11) NOT NULL,
+  `cid` varchar(256) NOT NULL,
+  `discription` varchar(256) NOT NULL,
+  `service_discrip` varchar(256) DEFAULT NULL,
+  `price_original` float DEFAULT NULL,
+  `price_discount` float DEFAULT NULL,
+  `thickness` float DEFAULT NULL,
+  `width` float DEFAULT NULL,
+  `height` float DEFAULT NULL,
+  `image_present` varchar(256) DEFAULT NULL,
+  `box` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -46,10 +77,33 @@ INSERT INTO `user` (`username`, `password`, `usertype`) VALUES
 --
 
 --
+-- Indexes for table `category`
+--
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`cid`);
+
+--
+-- Indexes for table `product`
+--
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`pid`),
+  ADD KEY `cid` (`cid`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`username`);
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `product`
+--
+ALTER TABLE `product`
+  ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`cid`) REFERENCES `category` (`cid`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

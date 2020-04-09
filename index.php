@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <?php   include("auth.php");  ?>
   <?php include ('include/header.php')?>
+<?php  require('Connection/dbconnection.php'); ?>
+  <?php session_start();?>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+
   <div class="wrapper">
     <!-- header  include-->
     <?php include ('include/navbar.php')?>

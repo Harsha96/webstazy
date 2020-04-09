@@ -14,7 +14,7 @@
         <img src="public/AdminLTE-3.0.4/public/AdminLTE-3.0.4/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
-        <a href="#" class="d-block">Alexander Pierce</a>
+        <a href="#" class="d-block"><?php echo $_SESSION['username']; ?></a>
       </div>
     </div>
 
@@ -264,7 +264,7 @@
           </ul>
         </li>
 
-      
+
         <li class="nav-item has-treeview">
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-book"></i>
