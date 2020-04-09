@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<?php include ('include/header.php')?>
-
+<?php include ('include/header.php');?>
+<?php  include('Connection/dbconnection.php') ;?>
 <?php session_start();?>
 </head>
 <body class="hold-transition sidebar-mini">
@@ -167,7 +167,7 @@
 
 
   <?php
-      include('Connection/dbconnection.php');
+
     if(isset($_POST['submit'])!="")
     {
         $pid      = $_POST['pid'];
@@ -183,7 +183,9 @@
         $boxed   = $_POST['boxed'];
 
 
-     $sql = mysqli_query($conn,"INSERT INTO product(pid,cid,description,service_discrip,price_original,price_discount,thickness,width,height,image_present,boxed) VALUES ('$pid','$cid','$pdes','$sdes', '$price', '$discount','$thickness','$width','$hight','$imageurl','$boxed')");
+     $sql = mysqli_query($conn,
+     "INSERT INTO `product` (`pid`, `cid`, `description`, `service_discrip`, `price_original`, `price_discount`, `thickness`, `width`, `height`, `image_present`, `box`) VALUES ('$pid', '$cid', '$pdes','$sdes', '$price', '$discount', '$thickness', '$width', '$hight ', '$imageurl','$boxed');"
+   );
 
 
       if($sql)
