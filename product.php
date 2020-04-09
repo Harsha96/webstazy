@@ -79,57 +79,72 @@
         </div>
         <div class="card-body p-0">
           <table class="table table-striped projects">
-          <a href="addproduct.php"><button  class="btn btn-success">Add New</button></a>  
+          <a href="addproduct.php"><button  class="btn btn-success">Add New</button></a>
               <thead>
                   <tr>
                       <th style="width: 1%">
-                          CID
+                          PID
                       </th>
                       <th style="width: 20%">
-                          Product Name
+                          Cat ID
                       </th>
                       <th style="width: 30%">
-                          Gallery
+                          Product Discription
                       </th>
                       <th>
-                          Discription
+                          Original Price
                       </th>
                       <th style="width: 8%" class="text-center">
-                          price
+                          Discount Price
                       </th>
                       <th style="width: 20%">
+                          Box
                       </th>
                   </tr>
               </thead>
               <tbody>
+                <?php
+
+                         include('Connection/dbconnection.php');
+                          $query=mysqli_query($conn,"select * from product ORDER BY pid asc")or die(mysql_error());
+                          while($row=mysqli_fetch_array($query))
+                          {
+                            $pid      = $row['pid'];
+                            $cid     = $row['cid'];
+                            $pdes    = $row['description'];
+                            $sdes      = $row['service_discrip'];
+                            $price     = $row['price_original'];
+                            $discount    = $row['price_discount'];
+                            $thickness   = $row['thickness'];
+                            $width    = $row['width'];
+                            $hight      = $row['height'];
+                            $imageurl    = $row['image_present'];
+                            $boxed   = $row['box'];
+
+                        ?>
+
+                      
+
+
                   <tr>
                       <td>
-                          C111
+                        <a href="view_product.php?pid=<?php echo $row["pid"]; ?>" title="Update"><?php echo $row['pid'] ?></a>
                       </td>
                       <td>
-                        TEST PRODUCT NAME
+                      <a href="view_product.php?pid=<?php echo $row["pid"]; ?>" title="Update"><?php echo $row['cid'] ?></a>
                       </td>
                       <td>
-                          <ul class="list-inline">
-                              <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png">
-                              </li>
-                              <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar2.png">
-                              </li>
-                              <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar3.png">
-                              </li>
-                              <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar04.png">
-                              </li>
-                          </ul>
+                            <a href="view_product.php?pid=<?php echo $row["pid"]; ?>" title="Update"><?php echo $row['description'] ?></a>
                       </td>
                       <td>
-                        TEST DISCRIPTION
+                        <a href="view_product.php?pid=<?php echo $row["pid"]; ?>" title="Update"><?php echo $row['price_original'] ?></a>
+
                       </td>
                       <td>
-                        TEST price
+                        <a href="view_product.php?pid=<?php echo $row["pid"]; ?>" title="Update"><?php echo $row['price_discount'] ?></a>
+                      </td>
+                      <td>
+                        <a href="view_product.php?pid=<?php echo $row["pid"]; ?>" title="Update"><?php echo $row['box'] ?></a>
                       </td>
 
                       <td class="project-actions text-right">
@@ -150,7 +165,7 @@
                           </a>
                       </td>
                   </tr>
-
+                     <?php } ?>
               </tbody>
           </table>
         </div>
