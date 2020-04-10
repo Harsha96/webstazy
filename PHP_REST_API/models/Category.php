@@ -23,7 +23,7 @@
       FROM
         ' . $this->table . '
       ORDER BY
-        cid DESC';
+        cid ASC';
 
       // Prepare statement
       $stmt = $this->conn->prepare($query);

@@ -2,7 +2,7 @@
 class Database{
   //DB params
   private $host ='localhost';
-  private $db_name ='webstay';
+  private $db_name ='sfs';
   private $username ='root';
   private $password='';
   private $conn;
