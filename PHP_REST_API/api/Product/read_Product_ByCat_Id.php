@@ -14,13 +14,17 @@ $db=$database->connect();
 
 $product=new Product($db);
 
-$result=$product->read_Product_by_category();
+ // Get ID
+ $product->cid = isset($_GET['cid']) ? $_GET['cid'] : die();
+
+ // Get post
+ $result=$product->read_Product_by_category_Id();
+
   //get row count
 
   $num=$result->rowCount();
 
-  //check if any products
-
+   
   if($num>0){
     //products array
     $products_arr=array();
@@ -30,8 +34,9 @@ $result=$product->read_Product_by_category();
      extract($row);
 
      $product_item=array(
-        'cid' =>$cid,
-        'pid' => $pid,
+      'cid' =>$cid,
+      'catname' =>$catname,
+      'pid' => $pid,
        'description' =>$description,
        'service_descrip' =>$service_descrip,
        'price_original' =>$price_original,
@@ -41,7 +46,7 @@ $result=$product->read_Product_by_category();
        'height' =>$height ,
        'image_present' => $image_present,
        'box' => $box
-
+       
      );
 
      //push to Data
@@ -54,20 +59,3 @@ echo json_encode($products_arr);
        array('message'=>'No Products Found')
      );
    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- ?>

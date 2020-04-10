@@ -31,6 +31,7 @@ $result=$product->read();
 
      $product_item=array(
        'pid' => $pid,
+       'catname' =>$catname,
        'description' =>$description,
        'service_descrip' =>$service_descrip,
        'price_original' =>$price_original,
