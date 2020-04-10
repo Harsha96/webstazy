@@ -118,5 +118,6 @@
             class="fas fa-th-large"></i></a>
       </li>
     </ul>
+    <a href="logout.php" class="fas fa-users mr-2">Logout</a>
   </nav>
   <!-- /.navbar -->
