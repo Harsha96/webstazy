@@ -110,10 +110,10 @@
 
                   <tr>
                       <td>
-                        <a href="view_product.php?pid=<?php echo $row["cid"]; ?>" title="Update"><?php echo $row['cid'] ?></a>
+                        <a href="view_product.php?cid=<?php echo $row["cid"]; ?>" title="Update"><?php echo $row['cid'] ?></a>
                       </td>
                       <td>
-                      <a href="view_product.php?pid=<?php echo $row["cid"]; ?>" title="Update"><?php echo $row['main_sub_cat'] ?></a>
+                      <a href="view_product.php?cid=<?php echo $row["cid"]; ?>" title="Update"><?php echo $row['main_sub_cat'] ?></a>
                       </td>
 
 
@@ -123,7 +123,7 @@
                               </i>
                               View
                           </a>
-                          <a class="btn btn-info btn-sm" href="#">
+                          <a class="btn btn-info btn-sm" href="updatecat.php">
                               <i class="fas fa-pencil-alt">
                               </i>
                               Edit
