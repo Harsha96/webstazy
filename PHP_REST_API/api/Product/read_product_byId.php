@@ -23,6 +23,7 @@ $product=new Product($db);
       // Create array
       $product_item=array(
         'pid' =>$product->pid,
+        'catname' =>$product->catname,
         'description' =>$product->description,
         'service_descrip' =>$product->service_descrip,
         'price_original' =>$product->price_original,
