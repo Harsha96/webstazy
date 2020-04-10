@@ -2,7 +2,11 @@
   <!-- Brand Logo -->
   <a href="index3.html" class="brand-link">
     <img src="img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+<<<<<<< HEAD
     style="opacity:100;margin-left:0px; border-radius:0;">
+=======
+         style="opacity:100;margin-left:0px; border-radius:0;">
+>>>>>>> 8c43b5438150234c08af17fff0a97c5a2a8d1715
     <span class="brand-text font-weight-light">AdminLTE 3</span>
   </a>
 

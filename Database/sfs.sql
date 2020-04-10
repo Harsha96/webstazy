@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 09, 2020 at 12:54 PM
+-- Generation Time: Apr 09, 2020 at 09:16 PM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 7.0.0
 
@@ -31,6 +31,13 @@ CREATE TABLE `category` (
   `main_sub_cat` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`cid`, `main_sub_cat`) VALUES
+('1', 'timber');
+
 -- --------------------------------------------------------
 
 --
@@ -38,9 +45,9 @@ CREATE TABLE `category` (
 --
 
 CREATE TABLE `product` (
-  `pid` int(11) NOT NULL,
+  `pid` varchar(256) NOT NULL,
   `cid` varchar(256) NOT NULL,
-  `discription` varchar(256) NOT NULL,
+  `description` varchar(256) NOT NULL,
   `service_discrip` varchar(256) DEFAULT NULL,
   `price_original` float DEFAULT NULL,
   `price_discount` float DEFAULT NULL,
@@ -50,6 +57,14 @@ CREATE TABLE `product` (
   `image_present` varchar(256) DEFAULT NULL,
   `box` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`pid`, `cid`, `description`, `service_discrip`, `price_original`, `price_discount`, `thickness`, `width`, `height`, `image_present`, `box`) VALUES
+('1', '1', '1', '1', 1, 1, 1, 1, 1, '1', '1'),
+('2', '1', '2', '3', 3, 3, 1, 1, 1, '1', '1');
 
 -- --------------------------------------------------------
 
