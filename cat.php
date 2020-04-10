@@ -123,7 +123,7 @@
                               </i>
                               View
                           </a>
-                          <a class="btn btn-info btn-sm" href="updatecat.php">
+                          <a class="btn btn-info btn-sm" href="updatecat.php?cid=<?php echo $row["cid"]; ?>">
                               <i class="fas fa-pencil-alt">
                               </i>
                               Edit

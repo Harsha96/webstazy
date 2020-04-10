@@ -153,7 +153,7 @@
                               </i>
                               View
                           </a>
-                          <a class="btn btn-info btn-sm" href="updateproduct.php">
+                          <a class="btn btn-info btn-sm" href="updateproduct.php?pid=<?php echo $row["pid"]; ?>">
                               <i class="fas fa-pencil-alt">
                               </i>
                               Edit

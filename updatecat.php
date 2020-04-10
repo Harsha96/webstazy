@@ -75,14 +75,15 @@
                   <i class="fas fa-minus"></i></button>
               </div>
             </div>
+              <?php   $cid=$_GET['cid']; ?>
             <form class=""  name="form" action="#" method="post">
 
 
             <div class="card-body">
 
               <div class="form-group">
-                <label for="inputName">Category ID</label>
-                <input type="text" name="cid" class="form-control" required="required">
+                <label for="inputName">Category ID </label>
+                <input type="text" name="cid" class="form-control" required="required"  value="<?php echo $cid ?>"  disabled>
               </div>
 
               <div class="form-group">
@@ -132,7 +133,7 @@
 
 
   <?php
-  $cid=$_GET['cid'];
+
   if(isset($_POST['submit'])!="")
   {
 
