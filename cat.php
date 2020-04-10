@@ -128,7 +128,7 @@
                               </i>
                               Edit
                           </a>
-                          <a class="btn btn-danger btn-sm" href="deletecat.php?pid=<?php echo $row["cid"]; ?>">
+                          <a class="btn btn-danger btn-sm" href="deletecat.php?cid=<?php echo $row["cid"]; ?>">
                               <i class="fas fa-trash">
                               </i>
                               Delete

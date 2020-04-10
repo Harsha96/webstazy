@@ -2,8 +2,8 @@
 	include('Connection/dbconnection.php');
 
 
-	$cid=$_GET['cid'];
-	$query = "DELETE FROM category WHERE cid=$cid";
+	$id=$_GET['cid'];
+	$query = "DELETE FROM category WHERE cid=$id";
 	$result = mysqli_query($conn,$query) or die ( mysqli_connect_error());
 
   if($result)
